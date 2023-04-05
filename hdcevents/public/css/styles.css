@@ -35,6 +35,16 @@ header{
     border-color: #c28008
 }
 
+.msg {
+    background-color: #8afd8a;
+    color: #155724;
+    border: 1px solid #70f38e;
+    width: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 10px;
+}
+
 /* navbar */
 
 #navbar img {
@@ -99,11 +109,11 @@ header{
 }
 
 #events-container .card {
-    flex: 1 1 0;
+    flex: 1 1 24%;
     max-width: 25%;
     border-radius: 10px;
     padding: 0;
-    margin: 5px;
+    margin: .5%;
 }
 
 #events-container img{
@@ -127,6 +137,22 @@ header{
 .card-participants {
     font-size: 14px;
     color: #757575;
+}
+
+/*  Event Create Page */
+
+#event-create-container {
+    padding: 30px
+}
+
+#event-create-container label {
+    font-weight: bold;
+}
+
+#event-create-container input,
+#event-create-container select,
+#event-create-container textarea {
+    font-size: 12px;
 }
 
 /* footer */
