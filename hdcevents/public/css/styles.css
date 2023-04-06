@@ -103,7 +103,7 @@
   
   #events-container .card {
     flex: 1 1 24%;
-    max-width: 25%;
+    max-width: 10%;
     border-radius: 10px;
     padding: 0;
     margin: .5%;
@@ -111,6 +111,7 @@
   
   #events-container img {
     max-height: 150px;
+    min-height: 150px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -182,6 +183,16 @@
   
   #info-container #event-submit {
     margin: 20px 0;
+  }
+
+  #items-list{
+list-style: none;
+padding-left: 0;
+  }
+
+  #items-list li{
+    display: flex;
+
   }
   
   /* footer */
