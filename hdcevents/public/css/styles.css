@@ -210,6 +210,13 @@ padding-left: 0;
 .dashboard-events-container th{
   width: 25%;
 }
+
+/* Edit page */
+
+  .img-preview {
+    width: 100x;
+    margin-top: 20px;
+  }
   
   /* footer */
   footer {
