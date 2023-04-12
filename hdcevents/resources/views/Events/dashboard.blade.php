@@ -23,15 +23,15 @@
                 <tbody>
                     @foreach($events as $event)
                         <tr>
-                            <td scropt="row">{{ $loop->index + 1}}</td>
-                            <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
-                            <td>{{ count($event->users)}}</td>
-                            <td> 
-                                <a href="/events/edit/{{$event->id}}" class= "btn btn-info edit-btn"><ion-icon name="create-outline"> </ion-icon> Editar</a>
-                                 <form action="/events/{{ $event->id}}" method="POST">
-                                     @csrf
-                                     @method('DELETE')
-                                     <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon>Deletar</button> 
+                            <td scropt="row">{{ $loop->index + 1 }}</td>
+                    <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
+                    <td>{{ count($event->users) }}</td>
+                    <td>
+                        <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
+                        <form action="/events/{{ $event->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon> Deletar</button>
                                 </form>
                             </td>
                         </tr>
@@ -63,7 +63,13 @@
                         <td><a href="/events/{{ $event->id }}">{{ $event->title }}</a></td>
                         <td>{{ count($event->users) }}</td>
                         <td>
-                            <a href="#">Sair do evento</a>
+                            <form action="/events/leave/{{ $event->id}}" method="POST">
+                            @csrf
+                            @method("DELETE")
+                            <button type="sumi" class="btn btn-danger delete-btn">
+                                <ion-icon name= "trash-outline"></ion-icon>Sair do Evento
+                            </button>
+                            </form>
                         </td>
                     </tr>
                 @endforeach    
